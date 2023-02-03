@@ -1,0 +1,8 @@
+FROM node:14
+WORKDIR /app-node
+ARG port=6000
+ENV port=$port
+EXPOSE $port
+COPY . .
+RUN npm install
+ENTRYPOINT npm start
